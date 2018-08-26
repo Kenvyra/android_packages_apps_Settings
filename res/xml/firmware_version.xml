@@ -27,14 +27,23 @@
         android:layout="@layout/kenvyra_logo"
         android:selectable="false"/>
 
-    <!-- Android version -->
+    <!-- Android version
     <Preference
         android:key="os_firmware_version"
         android:title="@string/firmware_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
         settings:searchable="false"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>-->
+
+    <!-- Kenvyra version -->
+    <Preference
+        android:key="kenvyra_version"
+        android:title="@string/kenvyra_version"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:searchable="false"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.KenvyraVersionDetailPreferenceController"/>
 
     <!-- Security patch -->
     <Preference
