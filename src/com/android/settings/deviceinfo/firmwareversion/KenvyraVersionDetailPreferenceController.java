@@ -42,6 +42,7 @@ public class KenvyraVersionDetailPreferenceController extends BasePreferenceCont
     private static final int ACTIVITY_TRIGGER_COUNT = 3;
 
     private static final String KEY_KENVYRA_VERSION_PROP = "ro.kenvyra.build.version";
+    private static final String KEY_KENVYRA_RELEASETYPE_PROP = "ro.kenvyra.releasetype";
 
     private final UserManager mUserManager;
     private final long[] mHits = new long[ACTIVITY_TRIGGER_COUNT];
@@ -62,7 +63,9 @@ public class KenvyraVersionDetailPreferenceController extends BasePreferenceCont
 
     @Override
     public CharSequence getSummary() {
-	return SystemProperties.get(KEY_KENVYRA_VERSION_PROP);
+	String kenvyraVer = SystemProperties.get(KEY_KENVYRA_VERSION_PROP);
+	String kenvyraReleasetype = SystemProperties.get(KEY_KENVYRA_RELEASETYPE_PROP);
+	return kenvyraVer + " | " + kenvyraReleasetype;
     }
 
     @Override
