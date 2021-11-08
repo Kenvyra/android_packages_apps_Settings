@@ -43,6 +43,7 @@ public class KenvyraVersionDetailPreferenceController extends BasePreferenceCont
 
     private static final String KEY_KENVYRA_VERSION_PROP = "ro.kenvyra.build.version";
     private static final String KEY_KENVYRA_RELEASETYPE_PROP = "ro.kenvyra.releasetype";
+    private static final String KEY_KENVYRA_ZIPTYPE_PROP = "ro.kenvyra.ziptype";
 
     private final UserManager mUserManager;
     private final long[] mHits = new long[ACTIVITY_TRIGGER_COUNT];
@@ -65,7 +66,8 @@ public class KenvyraVersionDetailPreferenceController extends BasePreferenceCont
     public CharSequence getSummary() {
 	String kenvyraVer = SystemProperties.get(KEY_KENVYRA_VERSION_PROP);
 	String kenvyraReleasetype = SystemProperties.get(KEY_KENVYRA_RELEASETYPE_PROP);
-	return kenvyraVer + " | " + kenvyraReleasetype;
+	String kenvyraZiptype = SystemProperties.get(KEY_KENVYRA_ZIPTYPE_PROP);
+	return kenvyraVer + " | " + kenvyraZiptype + " | " + kenvyraReleasetype;
     }
 
     @Override
