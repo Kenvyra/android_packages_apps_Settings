@@ -61,10 +61,17 @@
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_biometric_settings" />
 
+        <SwitchPreference
+            android:key="exec_spawn"
+            android:title="@string/exec_spawn_title"
+            android:summary="@string/exec_spawn_summary"
+            android:persistent="false" />
+
         <!-- App lock -->
         <com.android.settingslib.RestrictedPreference
             android:key="app_lock"
             android:title="@string/app_lock_title" />
+
     </PreferenceCategory>
 
     <Preference
