@@ -79,7 +79,7 @@ public class ExecSpawnPreferenceController extends AbstractPreferenceController
 
         if (mIsAdmin) {
             mExecSpawn = (SwitchPreference) mSecurityCategory.findPreference(PREF_KEY_EXEC_SPAWN);
-            mExecSpawn.setChecked(SystemProperties.getBoolean(SYS_KEY_EXEC_SPAWN, true));
+            mExecSpawn.setChecked(SystemProperties.getBoolean(SYS_KEY_EXEC_SPAWN, false));
         } else {
             mSecurityCategory.removePreference(mSecurityCategory.findPreference(PREF_KEY_EXEC_SPAWN));
         }
