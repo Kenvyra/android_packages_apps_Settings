@@ -4623,6 +4623,25 @@
             android:taskAffinity="com.android.settings.applock"
             android:launchMode="singleTask" />
 
+        <!-- Monet -->
+        <activity android:name="Settings$MonetSettingsActivity"
+            android:label="@string/monet_title"
+            android:icon="@drawable/ic_themes"
+            android:exported="true">
+            <intent-filter android:priority="1">
+                <action android:name="com.android.settings.MONET_SETTINGS" />
+                <action android:name="android.settings.MONET_SETTINGS" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="30">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.monet.MonetSettings" />
+        </activity>
+
         <!-- This is the longest AndroidManifest.xml ever. -->
     </application>
 </manifest>

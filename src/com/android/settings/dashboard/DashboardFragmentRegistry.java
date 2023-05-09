@@ -38,6 +38,7 @@ import com.android.settings.fuelgauge.batteryusage.PowerUsageSummary;
 import com.android.settings.gestures.GestureSettings;
 import com.android.settings.homepage.TopLevelSettings;
 import com.android.settings.language.LanguageAndInputSettings;
+import com.android.settings.monet.MonetSettings;
 import com.android.settings.network.NetworkDashboardFragment;
 import com.android.settings.notification.ConfigureNotificationSettings;
 import com.android.settings.notification.SoundSettings;
@@ -128,6 +129,8 @@ public class DashboardFragmentRegistry {
                 CategoryKey.CATEGORY_SMART_BATTERY_SETTINGS);
         PARENT_TO_CATEGORY_KEY_MAP.put(CommunalDashboardFragment.class.getName(),
                 CategoryKey.CATEGORY_COMMUNAL_SETTINGS);
+        PARENT_TO_CATEGORY_KEY_MAP.put(MonetSettings.class.getName(),
+                CategoryKey.CATEGORY_MONET_SETTINGS);
 
         CATEGORY_KEY_TO_PARENT_MAP = new ArrayMap<>(PARENT_TO_CATEGORY_KEY_MAP.size());
 

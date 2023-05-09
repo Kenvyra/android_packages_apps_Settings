@@ -124,6 +124,7 @@ import com.android.settings.localepicker.LocaleListEditor;
 import com.android.settings.location.LocationServices;
 import com.android.settings.location.LocationSettings;
 import com.android.settings.location.WifiScanningFragment;
+import com.android.settings.monet.MonetSettings;
 import com.android.settings.network.MobileNetworkListFragment;
 import com.android.settings.network.NetworkDashboardFragment;
 import com.android.settings.network.NetworkProviderSettings;
@@ -345,7 +346,8 @@ public class SettingsGateway {
             MobileNetworkSettings.class.getName(),
             AppLocaleDetails.class.getName(),
             TurnScreenOnSettings.class.getName(),
-            TurnScreenOnDetails.class.getName()
+            TurnScreenOnDetails.class.getName(),
+            MonetSettings.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
